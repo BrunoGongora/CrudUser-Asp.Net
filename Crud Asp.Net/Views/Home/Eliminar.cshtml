@@ -1,0 +1,75 @@
+﻿@model Crud_Asp.Net.Models.Contacto
+<style>
+    .btn_back {
+        width: 10rem;
+    }
+
+    .card-header {
+        background-color: #505050;
+    }
+
+    label {
+        color: gray;
+    }
+</style>
+<h1 class="text-center mb-1">Eliminar Usuario</h1>
+
+<div class="row">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header">
+                <h3 class="text-white"> <strong>Eliminar</strong></h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Eliminar">
+
+
+                    <input type="hidden" asp-for="id" />
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+                    <div class="form-group mb-4">
+                        <label asp-for="Nombre" class="control-label mb-1"></label>
+                        <input asp-for="Nombre" class="form-control" readonly />
+                        <span asp-validation-for="Nombre" class="text-danger"></span> 
+                    </div>
+
+
+                    <div class="form-group mb-4">
+                        <label asp-for="Telefono" class="control-label mb-1"></label>
+                        <input asp-for="Telefono" class="form-control" readonly />
+                        <span asp-validation-for="Telefono" class="text-danger"></span> 
+                    </div>
+
+
+                    <div class="form-group mb-4">
+                        <label asp-for="Direccion" class="control-label mb-1"></label>
+                        <input asp-for="Direccion" class="form-control" readonly />
+                        <span asp-validation-for="Direccion" class="text-danger"></span> 
+                    </div>
+
+
+                    <div class="form-group mb-4">
+                        <label asp-for="Email" class="control-label mb-1"></label>
+                        <input asp-for="Email" class="form-control" readonly />
+                        <span asp-validation-for="Email" class="text-danger"></span> 
+                    </div>
+
+
+                    <div class="form-group mb-4">
+                        <label asp-for="FechaRegistro" class="control-label mb-1"></label>
+                        <input asp-for="FechaRegistro" class="form-control" readonly />
+                        <span asp-validation-for="FechaRegistro" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group my-4">
+                        <button type="submit" class="btn btn-danger text-white d-block mx-auto">Eliminar Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="btn_back my-2">
+        <a class="btn btn-secondary my-4" asp-controller="Home" asp-action="Index">Volver</a>
+    </div>
+</div>
+
+

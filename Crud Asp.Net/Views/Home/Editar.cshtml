@@ -1,0 +1,77 @@
+﻿@model Crud_Asp.Net.Models.Contacto
+<style>
+    .btn_back {
+        width: 10rem;
+    }
+
+    .card-header {
+        background-color: #505050;
+    }
+
+    label {
+        color: gray;
+    }
+</style>
+<h1 class="text-center mb-1">Editar Usuario</h1>
+
+<div class="row">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header">
+                <h3 class="text-white"> <strong>Edición</strong></h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Editar">
+
+                    <!--Este campo es para el Id oculto-->
+                    <input type="hidden" asp-for="id"/>
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div> <!--Esto hace que se active la validacion que pusimos en el modelo de color rojo, solo se valida cuando presionen submit-->
+                    <!--Input de nombre-->
+                    <div class="form-group mb-4">
+                        <label asp-for="Nombre" class="control-label mb-1"></label>
+                        <input asp-for="Nombre" class="form-control" placeholder="Escribe el nombre" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span> <!--Esta etiqueta es de validacion igualmente debajo delos campos de input-->
+                    </div>
+
+                    <!--Input de Telefono-->
+                    <div class="form-group mb-4">
+                        <label asp-for="Telefono" class="control-label mb-1"></label>
+                        <input asp-for="Telefono" class="form-control" placeholder="Escribe el Telefono" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span> <!--Esta etiqueta es de validacion igualmente debajo delos campos de input-->
+                    </div>
+
+                    <!--Input de Direccion-->
+                    <div class="form-group mb-4">
+                        <label asp-for="Direccion" class="control-label mb-1"></label>
+                        <input asp-for="Direccion" class="form-control" placeholder="Escribe la Direccion" />
+                        <span asp-validation-for="Direccion" class="text-danger"></span> <!--Esta etiqueta es de validacion igualmente debajo delos campos de input-->
+                    </div>
+
+                    <!--Input de Email-->
+                    <div class="form-group mb-4">
+                        <label asp-for="Email" class="control-label mb-1"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Escribe el Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span> <!--Esta etiqueta es de validacion igualmente debajo delos campos de input-->
+                    </div>
+
+                    <!--Input de Fecha de Registro-->
+                    <div class="form-group mb-4">
+                        <label asp-for="FechaRegistro" class="control-label mb-1"></label>
+                        <input asp-for="FechaRegistro" class="form-control" placeholder="Escribe la Fecha de Registro" />
+                        <span asp-validation-for="FechaRegistro" class="text-danger"></span> <!--Esta etiqueta es de validacion igualmente debajo delos campos de input-->
+                    </div>
+                    <div class="form-group my-4">
+                        <button type="submit" class="btn btn-success d-block mx-auto">Editar Usuario</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="btn_back my-2">
+        <a class="btn btn-secondary my-4" asp-controller="Home" asp-action="Index">Volver</a>
+    </div>
+</div>
+
+
